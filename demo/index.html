@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id='wrapper'>
+    <div id='content'>
+        <img id="test-picture" class="picture" width="1280"/>
+        <canvas id="canvas" class="canvas" id="resultCanvas" onmouseup="onMouseUp.apply(this, arguments)" onmousedown="onMouseDown.apply(this, arguments)" onmousemove="onMouseMove.apply(this, arguments)"></canvas>
+    </div>
+</div>
+<div id="uImgWrapper">
+	<div id="uImgContainer">
+		<div id="uImgInner">
+			<div id="dndArea">
+				<div id="filePicker">
+					<div id="uploader-pick">点击选择图片</div>
+				</div>
+				<input id="file-upload" type="file" accept="image/*" onchange="imgChange(this)" />
+				<p>请将要抠的图片拖到这里~</p>
+			</div>
+		</div> 
+	</div>
+</div>
+<div id='panel' style='position: fixed;
+    left: 0;' >
+    <div id='reloadBtn' class='panelBtn' onclick="reloadImg()">加载新图片</div>
+	<div id='downloadBtn' class='panelBtn' onclick="downloadImg(event)">下载图片</div>
+	<label id='thresholdLable'>容差：</label>
+	<input id="colorThreshold" type="number" min="0" max="442" value="15"/>
+</div>
+</body>
+<script>
+	
+</script>
+<script src='../lib/jquery-2.1.1.js'></script>
+<script src="../lib/magic-wand.js"></script>
+<script src="../dist/main.js"></script>
+</html>

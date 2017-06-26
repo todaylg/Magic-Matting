@@ -1,0 +1,172 @@
+@charset "utf-8";
+/* ----------------Reset Css--------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video, input  {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
+    -webkit-text-size-adjust: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    font-family: arial, sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#wrapper {
+     position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none
+}
+
+#content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1920px;
+    max-height: 1080px;
+}
+#test-picture{
+    width: 1280px;
+    border: 3px solid #00b7ee;
+    padding: 2px;
+}
+.canvas {
+    position: absolute;
+}
+
+.canvas:hover {
+    cursor: default;
+}
+
+.picture {
+    position: absolute;
+}
+
+#uImgWrapper {
+    margin: 20px;
+     position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#uImgContainer {
+    border: 1px solid #dadada;
+    color: #838383;
+    font-size: 12px;
+    margin-top: 10px;
+    background-color: #FFF;
+}
+
+#uImgInner {
+    margin: 20px;
+}
+
+#dndArea{
+    border: 3px dashed #e6e6e6;
+    min-height: 238px;
+    padding-top: 158px;
+    text-align: center;
+    background: url(../images/image.png) center 93px no-repeat;
+    color: #cccccc;
+    font-size: 18px;
+    position: relative;
+}
+
+#uploader-pick {
+    font-size: 18px;
+    background: #00b7ee;
+    border-radius: 3px;
+    line-height: 44px;
+    padding: 0 30px;
+    color: #fff;
+    display: inline-block;
+    margin: 20px auto;
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+#file-upload{
+    /*当一幅图像的尺寸大于包含它的元素时会发生什么呢？"clip" 属性允许您规定一个元素的可见尺寸，这样此元素就会被修剪并显示为这个形状。*/
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+}
+
+#dndArea.uploaderOver {
+    border-color: #999999;
+}
+#panel{
+    display: none;
+}
+.panelBtn{
+    font-size: 14px;
+    height: 20px;
+    background: #00b7ee;
+    border-radius: 3px;
+    line-height: 20px;
+    padding: 0 10px;
+    color: #fff;
+    display: inline-block;
+    margin: 5px 5px;
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+#thresholdLable{
+    font-size: 14px;
+    color: white;
+    padding: 3px;
+    background-color: #00b7ee;
+    border-radius: 3px;
+}
+#colorThreshold{
+    border-bottom: 2px solid #00b7ee;
+}
