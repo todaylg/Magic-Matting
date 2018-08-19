@@ -324,7 +324,7 @@ function reloadImg(){
 	//Jquery
 	$('#wrapper').fadeOut('400', ()=> {
 		$('#uImgWrapper').fadeIn('400');
-		[mask.data,mask.predata] = [[],mask.data];
+		if(mask&&mask.data) [mask.data,mask.predata] = [[],mask.data];
 		delResData = null;
 		predelResData = null;
 		MagicWand.clearPreData();
